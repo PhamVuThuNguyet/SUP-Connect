@@ -1,0 +1,215 @@
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:id="@+id/inputMainView"
+    android:layout_height="match_parent"
+    android:background="@color/dark"
+    android:clipChildren="false">
+
+    <RelativeLayout
+        android:id="@+id/payment_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_anchor="@+id/payment_layout"
+        app:layout_anchorGravity="center"
+        >
+
+        <RelativeLayout
+            android:id="@+id/layout_header"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="20dp">
+                <ImageButton
+                    android:id="@+id/backBtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:background="@color/transparent"
+                    app:srcCompat="@drawable/ic_arrow_backbig" />
+        </RelativeLayout>
+        <RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_below="@+id/layout_header"
+    >
+        <LinearLayout
+            android:id="@+id/infor_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:padding="20dp"
+            android:layout_marginStart="25dp"
+            android:layout_marginEnd="20dp"
+            android:background="@drawable/bg_payment"
+            android:orientation="vertical"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_marginTop="30dp"
+                android:text="Trường đại học Công nghệ thông tin và Truyền thông Việt - Hàn"
+                android:textColor="@color/title_color"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="25dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/txt_schoolyear"
+                    android:gravity="left"
+                    android:text="Tài khoản thanh toán"
+                    android:textColor="@color/light_grey"
+                    android:layout_centerHorizontal="true"
+                    android:textSize="20sp" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="right">
+                <ImageButton
+                    android:id="@+id/wallet_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="right"
+                    android:background="@color/transparent"
+                    app:srcCompat="@drawable/ic_chat" />
+                <TextView
+                    android:id="@+id/account_payment"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/txt_account"
+                    android:gravity="right"
+                    android:text="SUP wallet"
+                    android:textColor="@color/title_color"
+                    android:layout_centerHorizontal="true"
+                    android:textSize="20sp" />
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="25dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="left"
+                    android:text="Loại thanh toán"
+                    android:textColor="@color/light_grey"
+                    android:layout_centerHorizontal="true"
+                    android:textSize="20sp" />
+                <TextView
+                    android:id="@+id/txt_paymentcate"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="right"
+                    android:text="Không rõ"
+                    android:textColor="@color/title_color"
+                    android:layout_centerHorizontal="true"
+                    android:textSize="20sp" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="25dp"
+                android:layout_marginBottom="40dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="left"
+                    android:text="Phòng ban"
+                    android:textColor="@color/light_grey"
+                    android:layout_centerHorizontal="true"
+                    android:textSize="20sp" />
+                <TextView
+                    android:id="@+id/txt_department"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="right"
+                    android:text="Phòng tài chính"
+                    android:textColor="@color/title_color"
+                    android:layout_centerHorizontal="true"
+                    android:textSize="20sp" />
+            </LinearLayout>
+        </LinearLayout>
+<LinearLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_centerHorizontal="true"
+    android:padding="2dp"
+    android:background="@drawable/bg_ic_home">
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/fab_home"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/dark_foreground"
+                android:elevation="0dp"
+                android:tint="@color/yellow_primary"
+                app:borderWidth="0dp"
+                app:elevation="0dp"
+                app:fabCustomSize="85dp"
+                app:maxImageSize="55dp"
+                app:pressedTranslationZ="12dp"
+                app:rippleColor="@color/title_color"
+                app:srcCompat="@drawable/ic_home"
+                app:tint="@null" />
+</LinearLayout>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="-30dp"
+               android:layout_below="@id/infor_layout"
+                android:background="@drawable/bg_edt_input_money"
+                >
+                <EditText
+                    android:id="@+id/edt_input_payment"
+                    android:layout_width="300dp"
+                    android:layout_height="wrap_content"
+                    android:hint="Nhập số tiền thanh toán"
+                    android:gravity="left"
+                    android:padding="15dp"
+                    android:singleLine="true"
+                    android:inputType="number"
+                   android:backgroundTint="@color/yellow_primary"
+                    android:textColorHint="@color/light_grey"
+                    android:textColor="@color/light_grey"
+                    >
+                </EditText>
+            </LinearLayout>
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="bottom"
+        app:layout_anchor="@+id/payment_layout"
+        app:layout_anchorGravity="center">
+
+        <Button
+            android:id="@+id/btn_yes_payment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="40dp"
+            android:layout_marginBottom="30dp"
+            android:background="@drawable/bg_tabitem_selected"
+            android:text="Xác nhận"
+            android:textColor="@color/dark"
+            android:textSize="20sp"
+            app:backgroundTint="@color/yellow_primary" />
+    </RelativeLayout>
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

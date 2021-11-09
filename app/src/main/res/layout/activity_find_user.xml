@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/dark"
+    tools:context=".FindOtherUsers">
+    
+    <EditText
+        android:id="@+id/student_card_id"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:background="@color/transparent"
+        android:inputType="text"
+        android:padding="15dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintRight_toRightOf="parent"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:textSize="15sp"
+        android:textColor="@color/white"
+        android:text="NFC PRO > QUÉT THẺ ĐỂ XEM THÔNG TIN"/>
+    <Button
+        android:visibility="invisible"
+        android:id="@+id/searchBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Tìm kiếm"
+        app:layout_constraintTop_toBottomOf="@+id/student_card_id"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:textColor="@color/txt_btn_inputscore_selector"
+        android:textSize="20sp"
+        app:backgroundTint="@color/btn_selector_inputscore"
+        />
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="265dp">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/lecturer1"
+        android:layout_width="180dp"
+        android:layout_height="match_parent"
+        app:cardCornerRadius="7dp"
+        app:cardUseCompatPadding="true">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/very_dark"
+            android:orientation="vertical"
+            android:padding="7dp">
+
+            <FrameLayout
+                android:id="@+id/avaframe"
+                android:layout_width="match_parent"
+                android:layout_height="180dp"
+                android:background="@drawable/border_img">
+
+                <ImageView
+                    android:id="@+id/img_lectureofclass"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:adjustViewBounds="true"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/huan" />
+            </FrameLayout>
+
+            <TextView
+                android:id="@+id/name_lectureofclass"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/avaframe"
+                android:gravity="center"
+                android:text="Ths.Bùi Trần Huân"
+                android:textColor="@color/yellow_primary"
+                android:textSize="18sp"
+                android:layout_marginTop="10dp"
+                android:maxLines="1"
+                android:ellipsize="end"/>
+
+            <TextView
+                android:id="@+id/mail_lectureofclass"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/name_lectureofclass"
+                android:layout_marginTop="7dp"
+                android:gravity="center"
+                android:text="bthuan@vku.udn.vn"
+                android:textColor="@color/paragraph_color"
+                android:textSize="13sp" />
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/lecturer2"
+        android:layout_width="180dp"
+        android:layout_height="match_parent"
+        android:layout_toRightOf="@id/lecturer1"
+        android:layout_marginLeft="10dp"
+        app:cardCornerRadius="7dp"
+        app:cardUseCompatPadding="true"
+        android:layout_toEndOf="@id/lecturer1"
+        android:layout_marginStart="10dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/very_dark"
+            android:orientation="vertical"
+            android:padding="7dp">
+
+            <FrameLayout
+                android:id="@+id/avaframe2"
+                android:layout_width="match_parent"
+                android:layout_height="180dp"
+                android:background="@drawable/border_img">
+
+                <ImageView
+                    android:id="@+id/img_lectureofclass2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:adjustViewBounds="true"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/huan" />
+            </FrameLayout>
+
+            <TextView
+                android:id="@+id/name_lectureofclass2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/avaframe2"
+                android:gravity="center"
+                android:text="Ths.Bùi Trần Huân"
+                android:textColor="@color/yellow_primary"
+                android:textSize="18sp"
+                android:layout_marginTop="10dp"/>
+
+            <TextView
+                android:id="@+id/mail_lectureofclass2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/name_lectureofclass2"
+                android:layout_marginTop="7dp"
+                android:gravity="center"
+                android:text="bthuan@vku.udn.vn"
+                android:textColor="@color/paragraph_color"
+                android:textSize="13sp" />
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+
+</RelativeLayout>

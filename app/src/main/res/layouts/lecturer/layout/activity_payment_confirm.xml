@@ -1,0 +1,230 @@
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/dark"
+    app:menu="@menu/bottom_bar_menu">
+
+    <RelativeLayout
+        android:id="@+id/payment_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_anchor="@+id/payment_layout"
+        app:layout_anchorGravity="center"
+        >
+
+        <RelativeLayout
+            android:id="@+id/layout_header"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="20dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/txt_payment"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:gravity="center"
+                    android:text="Giao dịch thành công"
+                    android:textColor="@color/title_color"
+                    android:textSize="28sp" />
+                <TextView
+                    android:id="@+id/txt_date_payment"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:gravity="center"
+                    android:layout_marginTop="10dp"
+                    android:text="03/02/2021 13:30"
+                    android:textColor="@color/title_color"
+                    android:textSize="20sp" />
+            </LinearLayout>
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/account_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_below="@+id/layout_header"
+            android:padding="20dp"
+            android:orientation="horizontal"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:text="Tài khoản"
+                android:textColor="@color/paragraph_color"
+                android:textSize="20sp"
+                android:layout_centerHorizontal="true"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/wallet_txt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txt_schoolyear"
+                android:gravity="right"
+                android:text="SUP Wallet"
+                android:textColor="@color/light_grey"
+                android:layout_centerHorizontal="true"
+                android:textSize="20sp" />
+
+        </LinearLayout>
+        <View
+            android:layout_below="@+id/account_layout"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/title_color"
+            android:layout_marginTop="10dp"
+            ></View>
+        <LinearLayout
+            android:id="@+id/infor_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_below="@+id/account_layout"
+            android:padding="20dp"
+            android:orientation="vertical"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:text="Thông tin giao dịch"
+                android:textColor="@color/paragraph_color"
+                android:textSize="23sp"
+                android:textStyle="bold"
+                />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="25dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="left"
+                    android:text="Phòng ban"
+                    android:textColor="@color/light_grey"
+                    android:layout_centerHorizontal="true"
+                    android:textSize="20sp" />
+                <TextView
+                    android:id="@+id/txt_department"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="right"
+                    android:text="Phòng tài chính"
+                    android:textColor="@color/title_color"
+                    android:layout_centerHorizontal="true"
+                    android:textSize="20sp" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="25dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="left"
+                    android:text="Loại thanh toán"
+                    android:textColor="@color/light_grey"
+                    android:layout_centerHorizontal="true"
+                    android:textSize="20sp" />
+                <TextView
+                    android:id="@+id/txt_paymentcate"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="right"
+                    android:text="Đóng học phí"
+                    android:textColor="@color/title_color"
+                    android:layout_centerHorizontal="true"
+                    android:textSize="20sp" />
+            </LinearLayout>
+        </LinearLayout>
+        <View
+            android:layout_below="@+id/infor_layout"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/title_color"
+            android:layout_marginTop="10dp"
+            ></View>
+        <LinearLayout
+            android:id="@+id/money_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_below="@+id/infor_layout"
+            android:padding="20dp"
+            android:orientation="vertical"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:text="Số tiền giao dịch"
+                android:textColor="@color/paragraph_color"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="25dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="left"
+                    android:text="Số tiền"
+                    android:textColor="@color/light_grey"
+                    android:layout_centerHorizontal="true"
+                    android:textSize="18sp" />
+                <TextView
+                    android:id="@+id/txt_money"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="right"
+                    android:text="1.000.000đ"
+                    android:textColor="@color/title_color"
+                    android:layout_centerHorizontal="true"
+                    android:textSize="20sp" />
+            </LinearLayout>
+
+        </LinearLayout>
+        <View
+            android:layout_below="@+id/infor_layout"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/title_color"
+            android:layout_marginTop="10dp"
+            ></View>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/money_layout"
+            android:gravity="bottom">
+
+            <Button
+                android:id="@+id/btn_home"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="40dp"
+                android:layout_marginBottom="30dp"
+                android:background="@drawable/bg_tabitem_selected"
+                android:text="Trang chính"
+                android:textColor="@color/dark"
+                android:textSize="20sp"
+                app:backgroundTint="@color/yellow_primary" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

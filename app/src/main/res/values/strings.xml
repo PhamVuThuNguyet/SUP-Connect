@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">Sup Connect</string>
+    <string name="transaction_history">Giao dịch gần đây</string>
+    <string name="transaction_allhistory">Tất cả</string>
+    <string name="current_grade_text">Điểm hiện tại</string>
+    <string name="target_grade_text">Mục tiêu</string>
+    <string name="target_progress_text">Tiến độ</string>
+
+    <string-array name="function">
+    <item>Điểm danh</item>
+    <item>Nhập điểm</item>
+</string-array>
+    <string-array name="notification">
+        <item>Thông báo chung</item>
+        <item>Báo nghỉ</item>
+        <item>Bài tập</item>
+
+    </string-array>
+
+</resources>

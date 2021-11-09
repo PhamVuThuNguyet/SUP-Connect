@@ -1,0 +1,265 @@
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/dark"
+    app:menu="@menu/bottom_bar_menu">
+
+    <RelativeLayout
+        android:id="@+id/input_score_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_anchor="@+id/input_score_layout"
+        app:layout_anchorGravity="center">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageButton
+                android:id="@+id/backBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="16dp"
+                android:background="@color/transparent"
+                app:srcCompat="@drawable/ic_arrow_backbig" />
+
+            <RelativeLayout
+                android:id="@+id/student_info_frame"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/backBtn">
+
+                <RelativeLayout
+                    android:id="@+id/student_profile_image_frame"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginLeft="10dp">
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/img_student_avatar"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/nguyet"
+                        app:civ_border_color="@color/yellow_primary"
+                        app:civ_border_width="2dp" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_toEndOf="@+id/student_profile_image_frame"
+                    android:layout_toRightOf="@+id/student_profile_image_frame">
+
+                    <TextView
+                        android:id="@+id/txt_student_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Phạm Vũ Thu Nguyệt"
+                        android:textColor="@color/title_color"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/txt_student_id"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/txt_student_name"
+                        android:text="19IT031"
+                        android:textColor="@color/paragraph_color"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/txt_student_class"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/txt_student_id"
+                        android:text="19IT1"
+                        android:textColor="@color/paragraph_color"
+                        android:textSize="20sp" />
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/input_score_frame"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/student_info_frame"
+                android:layout_marginTop="20dp"
+                android:padding="10dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_function_spinner"
+                    android:padding="20dp">
+
+                    <TextView
+                        android:id="@+id/semester_schoolyear"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_horizontal"
+                        android:text="Kỳ 1 - 2020"
+                        android:textAlignment="center"
+                        android:textColor="@color/title_color"
+                        android:textSize="20sp" />
+
+                    <RelativeLayout
+                        android:id="@+id/diligence_col"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/semester_schoolyear"
+                        android:padding="10dp">
+
+                        <TextView
+                            android:id="@+id/txt_diligence"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:text="Chuyên cần"
+                            android:textColor="@color/paragraph_color"
+                            android:textSize="20sp" />
+
+                        <EditText
+                            android:id="@+id/edt_diligence"
+                            android:layout_width="200dp"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:layout_alignParentRight="true"
+                            android:background="@drawable/bg_edt_input_score"
+                            android:gravity="center_horizontal"
+                            android:textAlignment="center"
+                            android:textColor="@color/title_color"
+                            android:textSize="20sp" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/assignment_col"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/diligence_col"
+                        android:padding="10dp">
+
+                        <TextView
+                            android:id="@+id/txt_assignment"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:text="Bài tập"
+                            android:textColor="@color/paragraph_color"
+                            android:textSize="20sp" />
+
+                        <EditText
+                            android:id="@+id/edt_assignment"
+                            android:layout_width="200dp"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:layout_alignParentRight="true"
+                            android:background="@drawable/bg_edt_input_score"
+                            android:gravity="center_horizontal"
+                            android:textAlignment="center"
+                            android:textColor="@color/title_color"
+                            android:textSize="20sp" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/midterm_col"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/assignment_col"
+                        android:padding="10dp">
+
+                        <TextView
+                            android:id="@+id/txt_midterm"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:text="Giữa kỳ"
+                            android:textColor="@color/paragraph_color"
+                            android:textSize="20sp" />
+
+                        <EditText
+                            android:id="@+id/edt_midterm"
+                            android:layout_width="200dp"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:layout_alignParentRight="true"
+                            android:background="@drawable/bg_edt_input_score"
+                            android:gravity="center_horizontal"
+                            android:textAlignment="center"
+                            android:textColor="@color/title_color"
+                            android:textSize="20sp" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/midterm_col"
+                        android:padding="10dp">
+
+                        <TextView
+                            android:id="@+id/txt_endterm"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:text="Cuối kỳ"
+                            android:textColor="@color/paragraph_color"
+                            android:textSize="20sp" />
+
+                        <EditText
+                            android:id="@+id/edt_endterm"
+                            android:layout_width="200dp"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:background="@drawable/bg_edt_input_score"
+                            android:gravity="center_horizontal"
+                            android:textAlignment="center"
+                            android:textColor="@color/title_color"
+                            android:textSize="20sp" />
+                    </RelativeLayout>
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/input_score_frame"
+                android:layout_marginTop="50dp">
+
+                <Button
+                    android:id="@+id/btn_yes"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Xác nhận"
+                    android:textColor="@color/txt_btn_inputscore_selector"
+                    android:textSize="20sp"
+                    app:backgroundTint="@color/btn_selector_inputscore"
+                    android:layout_marginHorizontal="50dp"/>
+
+                <Button
+                    android:id="@+id/btn_no"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@+id/btn_yes"
+                    android:layout_toRightOf="@+id/btn_yes"
+                    android:text="Hủy"
+                    android:textColor="@color/txt_btn_inputscore_selector"
+                    android:textSize="20sp"
+                    app:backgroundTint="@color/btn_selector_inputscore"
+                    android:layout_marginHorizontal="50dp"/>
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

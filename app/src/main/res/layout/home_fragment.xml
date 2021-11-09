@@ -1,0 +1,368 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Fragments.HomeFragment">
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/dark"
+        app:menu="@menu/bottom_bar_menu">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/headerhome"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginTop="20dp"
+                android:orientation="horizontal">
+
+                <ImageButton
+                    android:id="@+id/user_profile"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:background="@color/transparent"
+                    app:srcCompat="@drawable/ic_user_profile" />
+
+                <EditText
+                    style="@style/EditTextStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginBottom="5dp"
+                    android:background="@drawable/bg_search"
+                    android:drawableRight="@drawable/ic_search"
+                    android:foregroundTint="@color/white"
+                    android:layoutDirection="rtl"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="15dp" />
+            </LinearLayout>
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="20dp"
+                android:paddingBottom="60dp">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <FrameLayout
+                        android:id="@+id/calendarFrame"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="20dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="20dp"
+                        android:background="@drawable/bg_calendar"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <CalendarView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:dateTextAppearance="@style/CalenderViewDateCustomText"
+                            android:minHeight="350dp"
+                            android:theme="@style/CalenderViewCustom"
+                            android:weekDayTextAppearance="@style/CalenderViewWeekCustomText"
+                            android:weekNumberColor="@color/white" />
+                    </FrameLayout>
+
+                    <TextView
+                        android:id="@+id/txtLastesAssignment"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="30dp"
+                        android:gravity="center_vertical"
+                        android:text="Bài nộp sắp tới "
+                        android:textColor="@color/title_color"
+                        android:textSize="18sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/calendarFrame" />
+
+                    <ImageButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="2dp"
+                        android:layout_marginLeft="2dp"
+                        android:background="@color/transparent"
+                        app:layout_constraintBottom_toBottomOf="@+id/txtLastesAssignment"
+                        app:layout_constraintStart_toEndOf="@+id/txtLastesAssignment"
+                        app:layout_constraintTop_toTopOf="@+id/txtLastesAssignment"
+                        app:layout_constraintVertical_bias="1.0"
+                        app:srcCompat="@drawable/ic_nav_arrow_r_circle" />
+
+
+                    <LinearLayout
+                        android:id="@+id/latestAssignment"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="20dp"
+                        android:layout_marginTop="20dp"
+                        android:orientation="horizontal"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/txtLastesAssignment">
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/assignment1"
+                            android:layout_width="150dp"
+                            android:layout_height="170dp"
+                            android:backgroundTint="@color/transparent">
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:background="@drawable/bg_card_big"
+                                android:orientation="horizontal"
+                                android:padding="7dp">
+
+                                <ImageView
+                                    android:id="@+id/assignment1_icon"
+                                    android:layout_width="70dp"
+                                    android:layout_height="70dp"
+                                    android:layout_centerHorizontal="true"
+                                    android:layout_marginTop="10dp"
+                                    app:srcCompat="@drawable/ic_sbj_eng" />
+
+                                <TextView
+                                    android:id="@+id/assignment1_subject"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/assignment1_icon"
+                                    android:layout_centerHorizontal="true"
+                                    android:layout_marginTop="10dp"
+                                    android:ellipsize="marquee"
+                                    android:singleLine="true"
+                                    android:text="Tiếng Anh"
+                                    android:textColor="@color/white"
+                                    android:textSize="24sp" />
+
+                                <TextView
+                                    android:id="@+id/assignment1_deadline"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/assignment1_subject"
+                                    android:layout_centerHorizontal="true"
+                                    android:text="Còn 2 ngày"
+                                    android:textColor="@color/grey"
+                                    android:textSize="18sp" />
+                            </RelativeLayout>
+                        </androidx.cardview.widget.CardView>
+
+                        <RelativeLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginLeft="10dp"
+                            android:layout_weight="1"
+                            android:background="@color/dark">
+
+                            <androidx.cardview.widget.CardView
+                                android:id="@+id/assignment2"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:backgroundTint="@color/transparent">
+
+                                <RelativeLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="80dp"
+                                    android:background="@drawable/bg_card_small">
+
+                                    <ImageView
+                                        android:id="@+id/assignment2_icon"
+                                        android:layout_width="50dp"
+                                        android:layout_height="50dp"
+                                        android:layout_centerVertical="true"
+                                        android:layout_marginStart="10dp"
+                                        android:layout_marginLeft="10dp"
+                                        app:srcCompat="@drawable/ic_sbj_math" />
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_centerVertical="true"
+                                        android:layout_marginStart="10dp"
+                                        android:layout_marginLeft="10dp"
+                                        android:layout_marginEnd="15dp"
+                                        android:layout_marginRight="15dp"
+                                        android:layout_toRightOf="@+id/assignment2_icon"
+                                        android:orientation="vertical">
+
+                                        <TextView
+                                            android:id="@+id/assignment2_subject"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:ellipsize="marquee"
+                                            android:maxWidth="150dp"
+                                            android:singleLine="true"
+                                            android:text="Giải tích"
+                                            android:textColor="@color/white"
+                                            android:textSize="18sp" />
+
+                                        <TextView
+                                            android:id="@+id/assignment2_deadline"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:text="Còn 3 ngày"
+                                            android:textColor="@color/grey"
+                                            android:textSize="14sp" />
+                                    </LinearLayout>
+                                </RelativeLayout>
+                            </androidx.cardview.widget.CardView>
+
+                            <androidx.cardview.widget.CardView
+                                android:id="@+id/assignment3"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/assignment2"
+                                android:layout_marginTop="10dp"
+                                android:backgroundTint="@color/transparent">
+
+                                <RelativeLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="80dp"
+                                    android:background="@drawable/bg_card_small">
+
+                                    <ImageView
+                                        android:id="@+id/assignment3_icon"
+                                        android:layout_width="50dp"
+                                        android:layout_height="50dp"
+                                        android:layout_centerVertical="true"
+                                        android:layout_marginStart="10dp"
+                                        android:layout_marginLeft="10dp"
+                                        app:srcCompat="@drawable/ic_sbj_web_design" />
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_centerVertical="true"
+                                        android:layout_marginStart="10dp"
+                                        android:layout_marginLeft="10dp"
+                                        android:layout_marginEnd="15dp"
+                                        android:layout_marginRight="15dp"
+                                        android:layout_toRightOf="@+id/assignment3_icon"
+                                        android:orientation="vertical">
+
+                                        <TextView
+                                            android:id="@+id/assignment3_subject"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:ellipsize="marquee"
+                                            android:maxWidth="150dp"
+                                            android:singleLine="true"
+                                            android:text="Thiết kế web"
+                                            android:textColor="@color/white"
+                                            android:textSize="18sp" />
+
+                                        <TextView
+                                            android:id="@+id/assignment3_deadline"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:text="Còn 4 ngày"
+                                            android:textColor="@color/grey"
+                                            android:textSize="14sp" />
+                                    </LinearLayout>
+                                </RelativeLayout>
+                            </androidx.cardview.widget.CardView>
+                        </RelativeLayout>
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/txtMyTarget"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="30dp"
+                        android:gravity="center_vertical"
+                        android:text="Mục tiêu của tôi "
+                        android:textColor="@color/title_color"
+                        android:textSize="18sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/latestAssignment" />
+
+                    <ImageButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="2dp"
+                        android:layout_marginLeft="2dp"
+                        android:background="@color/transparent"
+                        app:layout_constraintBottom_toBottomOf="@+id/txtMyTarget"
+                        app:layout_constraintStart_toEndOf="@+id/txtMyTarget"
+                        app:layout_constraintTop_toTopOf="@+id/txtMyTarget"
+                        app:layout_constraintVertical_bias="1.0"
+                        app:srcCompat="@drawable/ic_nav_arrow_r_circle" />
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/targetScrollView"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginEnd="20dp"
+                        android:layout_marginRight="20dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/txtMyTarget" />
+
+                    <TextView
+                        android:id="@+id/txtAnnouncement"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="30dp"
+                        android:gravity="center_vertical"
+                        android:text="Thông báo mới "
+                        android:textColor="@color/title_color"
+                        android:textSize="18sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/targetScrollView" />
+
+                    <ImageButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="2dp"
+                        android:layout_marginLeft="2dp"
+                        android:background="@color/transparent"
+                        app:layout_constraintBottom_toBottomOf="@+id/txtAnnouncement"
+                        app:layout_constraintStart_toEndOf="@+id/txtAnnouncement"
+                        app:layout_constraintTop_toTopOf="@+id/txtAnnouncement"
+                        app:layout_constraintVertical_bias="1.0"
+                        app:srcCompat="@drawable/ic_nav_arrow_r_circle" />
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/latestAnnouncementScrollView"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginEnd="20dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/txtAnnouncement" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </ScrollView>
+        </LinearLayout>
+
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+</FrameLayout>

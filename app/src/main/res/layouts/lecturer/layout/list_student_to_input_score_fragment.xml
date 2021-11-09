@@ -1,0 +1,84 @@
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/dark"
+    app:menu="@menu/bottom_bar_menu">
+
+    <RelativeLayout
+        android:id="@+id/list_student_to_input_score_fragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_anchor="@+id/list_student_to_input_score_fragment"
+        app:layout_anchorGravity="center">
+
+        <RelativeLayout
+            android:id="@+id/title_student_list_of_class"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:text="Danh sách lớp"
+                android:textColor="@color/title_color"
+                android:textSize="20sp" />
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/title_student_list_of_class"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/bg_card_list_student">
+
+            <RelativeLayout
+                android:id="@+id/student_of_class_search_bar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp">
+
+                <EditText
+                    android:id="@+id/student_of_class_search_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_search_student"
+                    app:searchIcon="@null"
+                    style="@style/EditTextStyle"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="15dp"
+                    android:layout_centerVertical="true"
+                    android:layout_centerHorizontal="true"/>
+
+                <ImageButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@drawable/ic_search_with_bg"
+                    android:background="@color/transparent"
+                    android:layout_centerVertical="true"
+                    android:layout_toEndOf="@+id/student_of_class_search_view"
+                    android:layout_toRightOf="@+id/student_of_class_search_view" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/student_of_class_search_bar">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rc_view_student_list"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+            </RelativeLayout>
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

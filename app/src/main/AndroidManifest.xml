@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.supconnect">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/logo"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.SupConnect"
+        android:usesCleartextTraffic="true">
+        <activity android:name=".QrScanActivity"></activity>
+        <activity android:name=".OtherUserProfileActivity" />
+        <activity
+            android:name=".PaymentInputActivity"
+            android:label="SUP Connect"></activity>
+        <activity android:name=".LoginActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".HistoryRollCallViewStudentActivity" />
+        <activity android:name=".LectureClient.ManageClassActivity" />
+        <activity android:name=".LectureListActivity" />
+        <activity android:name=".GradeTrackingActivity" />
+        <activity android:name=".ScheduleActivity" />
+        <activity android:name=".ContactListActivity" />
+        <activity android:name=".AnnouncementListActivity" />
+        <activity android:name=".WalletActivity" />
+        <activity android:name=".PaymentActivity" />
+        <activity android:name=".PaymentSuccessActivity" />
+        <activity android:name=".PersonalTargetActivity" />
+        <activity android:name=".MainActivity" />
+        <activity android:name=".TargetDetailActivity" />
+        <activity android:name=".AnnouncementDetailActivity" />
+        <activity android:name=".UserProfileActivity" />
+        <activity android:name=".ConversationActivity" />
+        <activity android:name=".EditProfileActivity" />
+        <activity android:name=".LectureClient.InputScoreActivity"></activity>
+        <activity android:name=".LectureClient.UserProfileActivityForLecturer" />
+        <activity android:name=".LectureClient.HistoryRollCallViewLecturerActivity" />
+        <activity android:name=".LectureClient.MainActivityLecturer" />
+        <activity android:name=".LectureClient.EditProfileActivityForLecturer" />
+        <activity android:name=".LectureClient.CreateNotificationActivity" />
+        <activity android:name=".FindOtherUsers" />
+    </application>
+
+</manifest>

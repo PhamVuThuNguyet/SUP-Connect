@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_margin="16dp"
+    android:background="@drawable/bg_dialog"
+    android:orientation="vertical">
+<TextView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="12dp"
+    android:textColor="@color/dark_foreground"
+    android:gravity="center"
+    android:textStyle="bold"
+    android:text="Mật khẩu"
+    android:textSize="23dp"
+    ></TextView>
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:layout_marginTop="15dp"
+    android:background="@drawable/bg_card_small">
+    <EditText
+        android:id="@+id/edt_input_pass"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Nhập mật khẩu để thanh toán"
+        android:gravity="left"
+        android:padding="20dp"
+        android:singleLine="true"
+        android:inputType="textPassword"
+        android:backgroundTint="@color/yellow_primary"
+        android:textColorHint="@color/light_grey"
+        android:textColor="@color/light_grey"
+        android:textSize="20dp">
+    </EditText>
+</LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="20dp">
+        <Button
+            android:id="@+id/btn_close"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="10dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/bg_tabitem_selected"
+            android:text="Thoát"
+            android:textColor="@color/paragraph_color"
+            android:textSize="20sp"
+            app:backgroundTint="@color/dark" />
+        <Button
+            android:id="@+id/btn_confirm"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="10dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/bg_tabitem_selected"
+            android:text="Xác nhận"
+            android:textColor="@color/paragraph_color"
+            android:textSize="20sp"
+            app:backgroundTint="@color/dark" />
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Fragments.HomeFragment">
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/dark"
+        app:menu="@menu/bottom_bar_menu">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/headerhome"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginTop="20dp"
+                android:orientation="horizontal">
+
+                <ImageButton
+                    android:id="@+id/user_profile"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:background="@color/transparent"
+                    app:srcCompat="@drawable/ic_user_profile" />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginBottom="5dp"
+                    android:background="@drawable/bg_search"
+                    android:foregroundTint="@color/white"
+                    android:layoutDirection="rtl"
+                    android:drawableRight="@drawable/ic_search"
+                    android:paddingRight="15dp"
+                    android:paddingLeft="15dp"
+                    style="@style/EditTextStyle"
+                    />
+            </LinearLayout>
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="20dp"
+                android:paddingBottom="60dp">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <FrameLayout
+                        android:layout_marginTop="10dp"
+                        android:id="@+id/calendarFrame"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="20dp"
+                        android:layout_marginBottom="20dp"
+                        android:background="@drawable/bg_calendar"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <CalendarView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:dateTextAppearance="@style/CalenderViewDateCustomText"
+                            android:minHeight="350dp"
+                            android:theme="@style/CalenderViewCustom"
+                            android:weekDayTextAppearance="@style/CalenderViewWeekCustomText"
+                            android:weekNumberColor="@color/white" />
+                    </FrameLayout>
+
+
+                    <TextView
+                        android:id="@+id/txtAnnouncement"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="32dp"
+                        android:gravity="center_vertical"
+                        android:text="Thông báo mới "
+                        android:textColor="@color/title_color"
+                        android:textSize="18sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/calendarFrame" />
+
+                    <ImageButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="2dp"
+                        android:layout_marginLeft="2dp"
+                        android:background="@color/transparent"
+                        app:layout_constraintBottom_toBottomOf="@+id/txtAnnouncement"
+                        app:layout_constraintStart_toEndOf="@+id/txtAnnouncement"
+                        app:layout_constraintTop_toTopOf="@+id/txtAnnouncement"
+                        app:layout_constraintVertical_bias="1.0"
+                        app:srcCompat="@drawable/ic_nav_arrow_r_circle" />
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/latestAnnouncementScrollView"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginEnd="20dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/txtAnnouncement" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </ScrollView>
+        </LinearLayout>
+
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+</FrameLayout>

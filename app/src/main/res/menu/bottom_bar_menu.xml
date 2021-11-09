@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/menu_schedules"
+        android:enabled="true"
+        android:icon="@drawable/ic_calendar_inactive"
+        app:showAsAction="always"
+        android:title="schedule"/>
+    <item
+        android:id="@+id/menu_targets"
+        android:enabled="true"
+        android:icon="@drawable/ic_targer_inactive"
+        app:showAsAction="always"
+        android:title="target"/>
+    <item
+        android:id="@+id/menu_notifications"
+        android:enabled="true"
+        android:icon="@drawable/ic_notification_inactive"
+        app:showAsAction="always"
+        android:title="notification"/>
+    <item
+        android:id="@+id/menu_wallet"
+        android:enabled="true"
+        android:icon="@drawable/ic_wallet_inactive"
+        app:showAsAction="always"
+        android:title="wallet"/>
+
+</menu>

@@ -1,0 +1,92 @@
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:width="400dp"
+        android:height="400dp">
+        <shape android:shape="rectangle">
+            <stroke
+                android:width="15px"
+                android:color="@color/transparent" />
+            <solid android:color="@color/transparent" />
+        </shape>
+    </item>
+    <item
+        android:width="7dp"
+        android:bottom="0dp"
+        android:top="260dp">
+        <shape android:shape="rectangle">
+            <corners android:radius="10dip"/>
+            <solid android:color="@color/title_color" />
+        </shape>
+    </item>
+    <item
+        android:width="7dp"
+        android:bottom="260dp"
+        android:top="0dp">
+        <shape android:shape="rectangle">
+            <corners android:radius="10dip"/>
+            <solid android:color="@color/title_color" />
+        </shape>
+    </item>
+    <item
+        android:width="8dp"
+        android:bottom="0dp"
+        android:gravity="right"
+        android:top="260dp">
+        <shape android:shape="rectangle">
+            <corners android:radius="10dip"/>
+            <solid android:color="@color/title_color" />
+        </shape>
+    </item>
+    <item
+        android:width="8dp"
+        android:bottom="260dp"
+        android:gravity="right"
+        android:top="0dp">
+        <shape android:shape="rectangle">
+            <corners android:radius="10dip"/>
+            <solid android:color="@color/title_color" />
+        </shape>
+    </item>
+    <item
+        android:height="8dp"
+        android:gravity="top"
+        android:left="0dp"
+        android:right="260dp"
+        android:top="-1dp">
+        <shape android:shape="rectangle">
+            <corners android:radius="10dip"/>
+            <solid android:color="@color/title_color" />
+        </shape>
+    </item>
+    <item
+        android:height="8dp"
+        android:gravity="top"
+        android:left="260dp"
+        android:right="0dp"
+        android:top="-1dp">
+        <shape android:shape="rectangle">
+            <corners android:radius="10dip"/>
+            <solid android:color="@color/title_color" />
+        </shape>
+    </item>
+    <item
+        android:height="8dp"
+        android:gravity="bottom"
+        android:left="0dp"
+        android:right="260dp">
+        <shape android:shape="rectangle">
+            <corners android:radius="10dip"/>
+            <solid android:color="@color/title_color" />
+        </shape>
+    </item>
+    <item
+        android:height="8dp"
+        android:gravity="bottom"
+        android:left="260dp"
+        android:right="0dp">
+        <shape android:shape="rectangle">
+            <corners android:radius="10dip"/>
+            <solid android:color="@color/title_color" />
+        </shape>
+    </item>
+</layer-list>
